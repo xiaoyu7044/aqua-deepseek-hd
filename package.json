@@ -1,0 +1,44 @@
+{
+  "name": "aqua-deepseek-hd",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness (HD) 插件 — 在 HD 界面注入 DeepSeek API 价格鱼缸浮窗",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --esModuleInterop --skipLibCheck --module esnext --target es2022 --moduleResolution bundler --outDir . index.ts"
+  },
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh-plugin",
+    "pricing-widget",
+    "pixel-fish",
+    "aquarium",
+    "aqua-deepseek"
+  ],
+  "author": "LiJiaChuan (xiaoyu7044)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiaoyu7044/aqua-deepseek-hd"
+  },
+  "files": [
+    "index.js",
+    "index.ts",
+    "deepseek-price-widget.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dependencies": {
+    "aqua-deepseek": "^3.0.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "*"
+  }
+}
